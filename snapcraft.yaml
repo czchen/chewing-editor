@@ -2,22 +2,28 @@ name: chewing-editor
 version: 0
 summary: user dictionary editor for the chewing input method
 description: |
-   chewing-editor is a cross platform user dictionary editor for the chewing
-   input method. It provides an easy way to customize user dictionary so that
-   chewing input method can take advantage of the user dictionary and provide a
-   better input experience.
+    chewing-editor is a cross platform user dictionary editor for the chewing
+    input method. It provides an easy way to customize user dictionary so that
+    chewing input method can take advantage of the user dictionary and provide a
+    better input experience.
 confinement: devmode
 
-build-packages:
-    -   build-essential
-    -   cmake
-    -   libchewing3-dev
-    -   pkg-config
-    -   qtchooser
-    -   qttools5-dev
-    -   qttools5-dev-tools
+apps:
+    chewing-editor:
+        command: bin/chewing-editor
 
 parts:
     chewing-editor:
         plugin: cmake
         source: .
+        build-packages:
+            -   build-essential
+            -   cmake
+            -   libchewing3-dev
+            -   pkg-config
+            -   qtchooser
+            -   qttools5-dev
+            -   qttools5-dev-tools
+
+        stage-packages:
+            -   libqt5gui5
