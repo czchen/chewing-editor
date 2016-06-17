@@ -1,5 +1,5 @@
 name: chewing-editor
-version: 0
+version: @PROJECT_VERSION@
 summary: user dictionary editor for the chewing input method
 description: |
     chewing-editor is a cross platform user dictionary editor for the chewing

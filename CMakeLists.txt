@@ -96,6 +96,11 @@ configure_file(
     ${PROJECT_BINARY_DIR}/include/config.h
 )
 
+configure_file(
+    ${PROJECT_SOURCE_DIR}/snapcraft.yaml.in
+    ${PROJECT_SOURCE_DIR}/snapcraft.yaml
+)
+
 install(
     FILES ${PROJECT_SOURCE_DIR}/chewing-editor.desktop
     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications
