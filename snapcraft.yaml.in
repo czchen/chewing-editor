@@ -10,7 +10,7 @@ confinement: devmode
 
 apps:
     chewing-editor:
-        command: bin/chewing-editor
+        command: qt5-launch chewing-editor
 
 parts:
     chewing-editor:
